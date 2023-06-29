@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Case2
+        </title>
+    </head>
+        <body>
+            <script>
+                'use strict';
+
+                // Написать программу (скрипт), которая запрашивает у пользователя сумму вклада в
+                // банк и годовой процент, а затем вычисляет сумму вклада через 5 лет при
+                // ежегодном начислении процента на остаток суммы на вкладе.
+
+                let sum;
+                let procent;
+                let itog0;
+                let itog1;
+                let itog2;
+                let itog3;
+                let itog4;
+                    
+                sum = +prompt ('Введите сумму вклада, котрую вы готовы вложить на 5 лет'); // без + не производилось сложение
+                procent = prompt ('Введите процент, под который вы бы хотели положить ваши средства');
+                
+                itog0 = sum + ((procent/100) * sum);
+                itog1 = itog0 + (itog0 * procent/100);
+                itog2 = itog1 + (itog1 * procent/100);
+                itog3 = itog2 + (itog2 * procent/100);
+                itog4 = itog3 + (itog3 * procent/100);
+                
+                console.log ("Ваши средства через 5 лет составят -", itog4);
+
+            </script>
+        </body>
+</html>
